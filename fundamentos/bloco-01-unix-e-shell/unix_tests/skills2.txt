@@ -1,0 +1,8 @@
+Internet 
+Unix
+Bash
+msh
+Kernel
+Shell
+Wget
+Terminal
