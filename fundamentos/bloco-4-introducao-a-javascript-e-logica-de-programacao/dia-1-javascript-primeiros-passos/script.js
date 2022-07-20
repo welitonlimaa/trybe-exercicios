@@ -28,3 +28,10 @@
     }else{
         console.log(c);
     }
+// Programa 4 
+    const num=-1;
+    if(num>0){
+        console.log("Positivo");
+    }else{
+        console.log("Negativo");
+    }
