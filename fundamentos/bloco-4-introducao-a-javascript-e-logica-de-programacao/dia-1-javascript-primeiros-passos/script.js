@@ -35,3 +35,18 @@
     }else{
         console.log("Negativo");
     }
+// Programa 5
+    let alpha=-45;
+    let beta=90;
+    let omega=45;
+    let soma=alpha+beta+omega;
+
+    if(soma==180){
+        console.log('True');
+    }else if (soma!=180){
+        console.log('False');
+    }
+    
+    if (alpha<0 || beta<0 || omega<0){
+        console.log('Erro!');
+    }
