@@ -5,10 +5,17 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 //     console.log(number);
 //  }
 
- //Ex 2
+ // Ex 2
+//  let soma=0;
+//  for(i=0;i<numbers.length; i+=1){
+//     soma+=numbers[i];
+//  }
+//  console.log(soma);
+
+ // Ex 3
  let soma=0;
  for(i=0;i<numbers.length; i+=1){
     soma+=numbers[i];
  }
- console.log(soma);
-
+ let media=soma/numbers.length;
+ console.log(media);
