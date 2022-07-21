@@ -27,14 +27,32 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 // }
 
 //Ex 5
-let num=numbers[0];
-let maior=num;
-let maiorDois=0;
-for(i=1;i<numbers.length; i+=1){
-    if(maior>numbers[i]){
-        maior=maior;
+// let num=numbers[0];
+// let maior=num;
+// let maiorDois=0;
+// for(i=1;i<numbers.length; i+=1){
+//     if(maior>numbers[i]){
+//         maior=maior;
+//     }else{
+//         maior=numbers[i];
+//     }
+// }
+// console.log(maior);
+
+// Ex 6 
+let impar=0;
+let par=0;
+
+for(i=0;i<numbers.length; i+=1){
+    if(numbers[i]%2==0){
+        par+=1
     }else{
-        maior=numbers[i];
+        impar+=1
     }
 }
-console.log(maior);
+if(impar==0){
+    console.log("nenhum valor ímpar encontrado");
+} else{
+    console.log(impar);
+    console.log(par);
+}
