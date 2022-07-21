@@ -60,3 +60,14 @@
     }else{
         console.log("ERRO!");
     }
+
+//Programa 9
+    a=1;
+    b=2;
+    c=3;
+
+    if(a%2==1 || b%2==1 || c%2==1){
+        console.log("TRUE");
+    }else{
+        console.log("FALSE");
+    }
