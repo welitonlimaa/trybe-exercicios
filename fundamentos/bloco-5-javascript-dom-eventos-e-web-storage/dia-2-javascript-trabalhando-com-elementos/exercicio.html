@@ -73,20 +73,25 @@
             let tagSection= document.createElement('section');
             tagSection.className="center-content";
             localMain.appendChild(tagSection);
-
+        
         //Ex 4
+            let tagP= document.createElement('p');
+            tagP.innerText="Olá"
+            localMain.firstElementChild.appendChild(tagP);           
+
+        //Ex 5 e 6
             let tagSection1= document.createElement('section');
             let tagSection2= document.createElement('section');
             tagSection1.className="left-content";
             tagSection2.className="right-content";
-            localMain.firstElementChild.appendChild(tagSection1);
-            localMain.firstElementChild.appendChild(tagSection2);
+            localMain.appendChild(tagSection1);
+            localMain.appendChild(tagSection2);
 
-        //Ex 5
+        //Ex 7
             let tagImg=document.createElement('img');
             tagImg.src="https://picsum.photos/200";
             tagImg.className="small-image";
-            localMain.firstElementChild.appendChild(tagImg);
+            document.querySelector('.left-content').appendChild(tagImg);
 
     </script>
   </body>
