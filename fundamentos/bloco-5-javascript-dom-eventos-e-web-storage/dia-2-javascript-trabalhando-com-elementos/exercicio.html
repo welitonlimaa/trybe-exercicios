@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+        //Ex 1 e 10
+            let localBody= document.querySelector('body');
+            let title1= document.createElement('h1');
+            title1.className="title";
+            title1.innerText= 'Exercício 5.2 - JavaScript DOM';
+            localBody.appendChild(title1);
+
+        //Ex 2
+            let tagMain=document.createElement('main');
+            tagMain.className="main-content";
+            localBody.appendChild(tagMain);
+
+        //Ex 3
+            localMain= document.querySelector('main');
+            let tagSection= document.createElement('section');
+            tagSection.className="center-content";
+            localMain.appendChild(tagSection);
+        
+        //Ex 4
+            let tagP= document.createElement('p');
+            tagP.innerText="Olá"
+            localMain.firstElementChild.appendChild(tagP);           
+
+        //Ex 5 e 6
+            let tagSection1= document.createElement('section');
+            let tagSection2= document.createElement('section');
+            tagSection1.className="left-content";
+            tagSection2.className="right-content";
+            localMain.appendChild(tagSection1);
+            localMain.appendChild(tagSection2);
+
+        //Ex 7
+            let tagImg=document.createElement('img');
+            tagImg.src="https://picsum.photos/200";
+            tagImg.className="small-image";
+            document.querySelector('.left-content').appendChild(tagImg);
+
+        //Ex 8
+            let tagUl=document.createElement('ul');
+            document.querySelector('.right-content').appendChild(tagUl);
+            let numbers=['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+            for(number of numbers){
+              let tagLi=document.createElement('li');
+              tagLi.innerText=number;
+              document.querySelector('.right-content').firstElementChild.appendChild(tagLi);
+            }
+        //Ex 9 e 11
+            let tagH3=[];        
+            for(i=0;i<3;i+=1){
+            tagH3[i]=document.createElement('h3');
+            tagH3[i].className="description";
+            localMain.appendChild(tagH3[i]);
+            }
+        //Ex 12
+            const sectionLeftContent = document.getElementsByClassName('left-content')[0];
+            localMain.removeChild(sectionLeftContent);
+
+      // 4. Centralize a `section` criado no passo 6 (aquele que possui a classe `right-content`). Dica: para centralizar, basta configurar o `margin-right: auto` da `section`;
+      const sectionRightContent = document.getElementsByClassName('right-content')[0];
+      sectionRightContent.style.marginRight='auto';
+      
+      // 5. Troque a cor de fundo do elemento pai da `section` criada no passo 3 (aquela que possui a classe `center-content`) para a cor verde;
+      const sectionCenterContent = document.getElementsByClassName('center-content')[0];
+      sectionCenterContent.parentNode.style.backgroundColor = 'green';
+
+      // 6.Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+      const ul = document.getElementsByTagName('ul')[0];
+      ul.lastChild.remove();
+      ul.lastChild.remove();
+    </script>
+  </body>
+</html>
