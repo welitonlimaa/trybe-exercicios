@@ -29,8 +29,17 @@ function createDays() {
       if(decemberDaysList[i]=== 4 || decemberDaysList[i]=== 11 || decemberDaysList[i]=== 18 || decemberDaysList[i]=== 25){
         daysList.className=daysList.className + " friday";
       }
-  
+
       DaysId.appendChild(daysList);
     };
 }
 createDays();
+
+function createButton(nameButton) {
+      const localButton = document.querySelector('.buttons-container');
+      const buttonItem = document.createElement('button');
+      buttonItem.innerHTML = nameButton;
+  
+      localButton.appendChild(buttonItem);
+  };
+createButton('Feriados');
