@@ -93,6 +93,16 @@
             tagImg.className="small-image";
             document.querySelector('.left-content').appendChild(tagImg);
 
+        //Ex 8
+            let tagUl=document.createElement('ul');
+            document.querySelector('.right-content').appendChild(tagUl);
+            let numbers=['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+            for(number of numbers){
+              let tagLi=document.createElement('li');
+              tagLi.innerText=number;
+              document.querySelector('.right-content').firstElementChild.appendChild(tagLi);
+            }
+
     </script>
   </body>
 </html>
