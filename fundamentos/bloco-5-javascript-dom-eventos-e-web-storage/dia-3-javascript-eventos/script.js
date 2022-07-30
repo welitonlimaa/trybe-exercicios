@@ -40,11 +40,31 @@ createDays();
 function createButton(nameButton) {
       const localButton = document.querySelector('.buttons-container');
       const buttonItem = document.createElement('button');
+      buttonItem.id="btn-holiday";
       buttonItem.innerHTML = nameButton;
   
       localButton.appendChild(buttonItem);
   };
 createButton('Feriados');
+
+//Ex 3
+function onClick() {
+  let holidayElements = document.getElementsByClassName("holiday");
+  for(holidays of holidayElements){
+    if(holidays.style.backgroundColor === 'yellow'){
+        holidays.style="background-color: rgb(238,238,238)";
+    }else{
+        holidays.style="background-color: yellow";
+    }
+  }
+}
+
+window.onload = function() {
+ let holidayBtn= document.getElementById("btn-holiday");
+ holidayBtn.addEventListener('click',onClick);
+
+
+}
 
 //Ex 4
 function createButton2(nameButton) {
